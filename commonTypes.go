@@ -1,5 +1,10 @@
 package util
 
+// definition of a normal plugin => the CreatePlugin method
+type IPlugin interface {
+	CreatePlugin(params...interface{}) (err error)
+}
+
 // definition of the Output plugin
 type IOutputPlugin interface {
 	Println(value...string)
